@@ -31,8 +31,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+
 
 @Service
 @RequiredArgsConstructor
@@ -49,6 +48,7 @@ public class PdfPasseportService {
         PageSize cardSize = new PageSize(220.6f, 350f).rotate();
 
         try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+
             PdfWriter writer = new PdfWriter(baos);
             PdfDocument pdf = new PdfDocument(writer);
 
